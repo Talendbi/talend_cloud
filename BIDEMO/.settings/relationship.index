@@ -41,6 +41,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_r7t_8MW0Ee6v5acBEIeKSg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_dsVuELCVEe6OwqgxDmsMyg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_dsVuELCVEe6OwqgxDmsMyg - customers_master",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_tkyg4K9KEe6vHfefOo8n2g",
     "version" : "0.1",
     "type" : "job"
