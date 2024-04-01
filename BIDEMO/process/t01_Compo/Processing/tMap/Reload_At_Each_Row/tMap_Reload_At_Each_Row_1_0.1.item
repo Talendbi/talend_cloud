@@ -14,8 +14,8 @@
     <elementParameter contextMode="false" field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
     <elementParameter contextMode="false" field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter contextMode="false" field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
-    <elementParameter contextMode="false" field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
-    <elementParameter contextMode="false" field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter contextMode="false" field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="false"/>
+    <elementParameter contextMode="false" field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false"/>
     <elementParameter contextMode="false" field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter contextMode="false" field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
     <elementParameter contextMode="false" field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
@@ -43,37 +43,45 @@
     <elementParameter contextMode="false" field="CHECK" name="DISABLE_ERROR" value="false"/>
     <elementParameter contextMode="false" field="CHECK" name="DISABLE_WARNINGS" value="false"/>
     <elementParameter contextMode="false" field="CHECK" name="DISABLE_INFO" value="false"/>
-    <elementParameter contextMode="false" field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
-    <elementParameter contextMode="false" field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
-    <elementParameter contextMode="false" field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter contextMode="false" field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter contextMode="false" field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter contextMode="false" field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
     <elementParameter contextMode="false" field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
     <elementParameter contextMode="false" field="CHECK" name="ON_FILES_FLAG" value="false"/>
-    <elementParameter contextMode="false" field="DIRECTORY" name="FILE_PATH" value="&quot;/home/nfrancisco/Talend/Logiciels/TOS/4.0.0M3/Install/TOS-All-r37054-V4.0.0M3/workspace/.metadata&quot;"/>
+    <elementParameter contextMode="false" field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/presales/workspace/.metadata&quot;"/>
     <elementParameter contextMode="false" field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;"/>
     <elementParameter contextMode="false" field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;"/>
     <elementParameter contextMode="false" field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;"/>
-    <elementParameter contextMode="false" field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
-    <elementParameter contextMode="false" field="CLOSED_LIST" name="DB_TYPE" value="tDBOutput"/>
-    <elementParameter contextMode="false" field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
-    <elementParameter contextMode="false" field="TEXT" name="HOST" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="TEXT" name="PORT" value="&quot;&quot;"/>
+    <elementParameter contextMode="false" field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter contextMode="false" field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput"/>
+    <elementParameter contextMode="false" field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter contextMode="false" field="TEXT" name="HOST" value="&quot;10.34.40.169&quot;"/>
+    <elementParameter contextMode="false" field="TEXT" name="PORT" value="&quot;5433&quot;"/>
     <elementParameter contextMode="false" field="TEXT" name="DATASOURCE" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="TEXT" name="DBNAME" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
+    <elementParameter contextMode="false" field="TEXT" name="DBNAME" value="&quot;damadb&quot;"/>
+    <elementParameter contextMode="false" field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;damadb&quot;"/>
     <elementParameter contextMode="false" field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LdY5Z0wHqPcyHIxLYvwkbt8K1l+E/zt5XGy2Gmqt"/>
+    <elementParameter contextMode="false" field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter contextMode="false" field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter contextMode="false" field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WYIfM7h3ApXicgyZ1FYPt8P1FpEFCphG2OhwlnGpIfcBamU+wJw="/>
     <elementParameter contextMode="false" field="FILE" name="DBFILE" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;"/>
-    <elementParameter contextMode="false" field="DBTABLE" name="TABLE_METER" value="&quot;&quot;"/>
+    <elementParameter contextMode="false" field="DBTABLE" name="TABLE_STATS" value="&quot;statecacher&quot;"/>
+    <elementParameter contextMode="false" field="DBTABLE" name="TABLE_LOGS" value="&quot;logcacher&quot;"/>
+    <elementParameter contextMode="false" field="DBTABLE" name="TABLE_METER" value="&quot;flowmeter&quot;"/>
     <elementParameter contextMode="false" field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
     <elementParameter contextMode="false" field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
     <elementParameter contextMode="false" field="CHECK" name="CATCH_USER_WARNING" value="true"/>
     <elementParameter contextMode="false" field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
     <elementParameter contextMode="false" field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15"/>
     <elementParameter contextMode="false" field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
+    <elementParameter field="CHECK" name="STATS_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="PROPERTY_TYPE" name="PROPERTY_TYPE" value=""/>
+    <elementParameter field="TEXT" name="URL" value=""/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="_MeivoNq2Ee6J2YQAhOqe8A"/>
     <routinesParameter id="_BzsnoJWBEd2-2urAiuZBEg" name="DataOperation"/>
     <routinesParameter id="_B9YvIJWBEd2-2urAiuZBEg" name="Mathematical"/>
     <routinesParameter id="_B9rqE5WBEd2-2urAiuZBEg" name="Numeric"/>
@@ -314,13 +322,13 @@
     <elementParameter contextMode="false" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter contextMode="false" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e4c66c96-c4e7-481d-aee9-d9227f8b3078"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+A08xY7o71thRwj8LB2Z3ss6Tfzg06ZTfVKj3OmUU1AObwUEMSsrgrTW4jrHZUneGBFqiF2WTweG&#13;
-eXMz4s3Qcg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_56f14c12-1d2d-49f7-b355-6696568a2d50"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6gFB4hdwmxqr+AEWxMlG5UoBJFopyURadUo98xs7CcZchLxDU02zQlC83GbYe0cbSo6BQ0fRcVzw&#13;
-V1bHstBesQ==</DigestValue></Reference></SignedInfo><SignatureValue>CUD5O8DXq/YJwnVFg6fGFVXTmIeqYIffyculptHad1nzHcwuOaHgPK7pHKXPbNcKIdNMCo9/Kxvd&#13;
-sTIwNHprl/xtDO/rVcD0JFxzrrpod/7U7adjpTh5TRXdlWOoY4N5AIY/UtoZwfY6s4/emXZbP8QI&#13;
-m60nwX2Jd8sufC46LFNjpsDYjpQs6pVtao73gvER6LgGreUoytJvbz84azx5gjLnmQro2JNgLO/Y&#13;
-rMQ0e7hEjARZmZq7r1FrWcrR1tRMEdVq/tuvuMk4XqNgtlC4sM8a/AjHBdL4R3DRm0HSv6cA0HFE&#13;
-3inLuB8xLI02hRREuNukvK+EmYTPs2G7bh7JwQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5285c9c2-1453-4594-a60f-f65893a261a1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vxUrqvVyWvA5Wovakd7DXV7x2azr2yRnNA7hm4qa1nmZhJMF1azgOYIPL2msK/4F8fSnBr/+Gr+F&#13;
+0J0Vn3Royw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d2de8fbf-7c1b-415e-aeaf-2e24d71e15f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eVZ7+SGK80mi+N60MUFr6Bc6VeNAy/GlG/2nOEJNWh/H5shVzgv/EeG6RtCSTB1wkYnQdaIMa67T&#13;
+jzXAheP5MQ==</DigestValue></Reference></SignedInfo><SignatureValue>fFJgJoVMGt50hCLVL04malMLj2KqN5EAUdUO9+j7atNg2QiRkHKpW1GyNOU/QH1tx8y3Yyj2s88F&#13;
+SKPCfBxbbTsJsT9HrPV54jqSn+ZXimu0Lp/GL0gle8GdDorDp793d118NRRxZDqVGoJxAad52Wqu&#13;
+k66b3R4P5MatgFfuzTEjI4m5IlTThJVQKorwzgztP7q9ultTwvIWNa87Sac5yCSP98dl9y9vU5jt&#13;
+Nm6bW9wmeFEmN5z751/iRBJ2IaMqiuKB08YzfiVLGqPkZh626sdfqWYwt5ror26oNPipOMHqbczN&#13;
+nB3TfGZ7ieCzXo0IwexWE1rGpUwHUBjb2zs2JA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -342,4 +350,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_56f14c12-1d2d-49f7-b355-6696568a2d50" Target="#_e4c66c96-c4e7-481d-aee9-d9227f8b3078"><Timestamp>2024-03-24 18:22:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d2de8fbf-7c1b-415e-aeaf-2e24d71e15f4" Target="#_5285c9c2-1453-4594-a60f-f65893a261a1"><Timestamp>2024-04-01 09:28:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
