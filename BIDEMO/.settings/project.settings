@@ -91,7 +91,7 @@
         "show" : true,
         "field" : "ENCODING_TYPE",
         "name" : "ENCODING",
-        "value" : "ISO-8859-15",
+        "value" : "\"UTF-8\"",
         "contextMode" : false
       }, {
         "show" : true,
@@ -192,13 +192,13 @@
         "show" : true,
         "field" : "DBTABLE",
         "name" : "TABLE_STATS",
-        "value" : "\"statecacher\"",
+        "value" : "\"stats\"",
         "contextMode" : false
       }, {
         "show" : true,
         "field" : "DBTABLE",
         "name" : "TABLE_LOGS",
-        "value" : "\"logcacher\"",
+        "value" : "\"logs\"",
         "contextMode" : false
       }, {
         "show" : true,
@@ -234,7 +234,7 @@
         "show" : true,
         "field" : "TECHNICAL",
         "name" : "ENCODING:ENCODING_TYPE",
-        "value" : "ISO-8859-15",
+        "value" : "UTF-8",
         "contextMode" : false
       }, {
         "show" : true,
