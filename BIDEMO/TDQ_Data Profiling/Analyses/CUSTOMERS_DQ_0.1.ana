@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_eT45UAx2Ee-KGJHkc1u0Zg" name="CUSTOMERS_DQ" creationDate="2024-05-07T15:34:05.155+0300" defaultContext="Default">
+    <taggedValue xmi:id="_eT45UQx2Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_eT45Ugx2Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+    <taggedValue xmi:id="_eT45Uwx2Ee-KGJHkc1u0Zg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_eT45VAx2Ee-KGJHkc1u0Zg" tag="Description" value=""/>
+    <taggedValue xmi:id="_eT45VQx2Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_eXEJIQx2Ee-KGJHkc1u0Zg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_eXEJIgx2Ee-KGJHkc1u0Zg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_eXEJIwx2Ee-KGJHkc1u0Zg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_eXF-UAx2Ee-KGJHkc1u0Zg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_eT45Vgx2Ee-KGJHkc1u0Zg"/>
+    <results xmi:id="_eT45Vwx2Ee-KGJHkc1u0Zg">
+      <resultMetadata xmi:id="_eT45WAx2Ee-KGJHkc1u0Zg"/>
+    </results>
+    <parameters xmi:id="_eT45WQx2Ee-KGJHkc1u0Zg" dataFilter="_eXF-UQx2Ee-KGJHkc1u0Zg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_eXEJIAx2Ee-KGJHkc1u0Zg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_eXF-UQx2Ee-KGJHkc1u0Zg" name="CUSTOMERS_DQ">
+    <ranges xmi:id="_eXF-Ugx2Ee-KGJHkc1u0Zg">
+      <expressions xmi:id="_eXF-Uwx2Ee-KGJHkc1u0Zg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_eXF-VAx2Ee-KGJHkc1u0Zg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

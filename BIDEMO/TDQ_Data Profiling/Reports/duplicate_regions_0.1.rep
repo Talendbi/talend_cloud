@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_0sN8gAySEe-u3eVkGeU8gg" name="duplicate_regions" creationDate="2024-05-07T18:57:01.253+0300">
+  <taggedValue xmi:id="_0sN8gQySEe-u3eVkGeU8gg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_0sN8ggySEe-u3eVkGeU8gg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_0sN8gwySEe-u3eVkGeU8gg" tag="Purpose"/>
+  <taggedValue xmi:id="_0sN8hAySEe-u3eVkGeU8gg" tag="Description"/>
+  <taggedValue xmi:id="_0sN8hQySEe-u3eVkGeU8gg" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_0sN8hgySEe-u3eVkGeU8gg" tag="OutputFolder" value=""/>
+  <taggedValue xmi:id="_0sN8hwySEe-u3eVkGeU8gg" tag="REP_DBINFO_DBTYPE" value="HSQL"/>
+  <taggedValue xmi:id="_0sN8iAySEe-u3eVkGeU8gg" tag="REP_DBINFO_DBVERSION" value=""/>
+  <taggedValue xmi:id="_0sN8iQySEe-u3eVkGeU8gg" tag="REP_DBINFO_HOST" value=""/>
+  <taggedValue xmi:id="_0sN8igySEe-u3eVkGeU8gg" tag="REP_DBINFO_PORT" value=""/>
+  <taggedValue xmi:id="_0sN8iwySEe-u3eVkGeU8gg" tag="REP_DBINFO_WAREHOUSE" value=""/>
+  <taggedValue xmi:id="_0sN8jAySEe-u3eVkGeU8gg" tag="REP_DBINFO_DBNAME" value="talend_dq"/>
+  <taggedValue xmi:id="_0sN8jQySEe-u3eVkGeU8gg" tag="REP_DBINFO_SCHEMA" value=""/>
+  <taggedValue xmi:id="_0sN8jgySEe-u3eVkGeU8gg" tag="REP_DBINFO_USER" value="sa"/>
+  <taggedValue xmi:id="_0sN8jwySEe-u3eVkGeU8gg" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:LyHT8CAFejGmR4zue9EUlK4cwcpxmaDRA8iJ2Q=="/>
+  <taggedValue xmi:id="_0sN8kAySEe-u3eVkGeU8gg" tag="REP_DBINFO_PARAMETER" value=""/>
+  <taggedValue xmi:id="_0sN8kQySEe-u3eVkGeU8gg" tag="REP_DBINFO_URL" value="jdbc:hsqldb:file:C:\Users\DAMALINK\workspace\talend_cloud-1443510968\BIDEMO\TDQ_reporting_db\talend_dq"/>
+  <taggedValue xmi:id="_0sN8kgySEe-u3eVkGeU8gg" tag="REP_DBINFO_DRIVER" value="org.hsqldb.jdbcDriver"/>
+  <taggedValue xmi:id="_0sN8kwySEe-u3eVkGeU8gg" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.HSQLDialect"/>
+  <taggedValue xmi:id="_0sN8lAySEe-u3eVkGeU8gg" tag="REP_PASSWORD_CONTEXT" value="false"/>
+</dataquality.reports:TdReport>

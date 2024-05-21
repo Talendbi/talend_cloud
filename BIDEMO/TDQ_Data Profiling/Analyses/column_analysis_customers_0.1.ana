@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_SMvWwAx1Ee-KGJHkc1u0Zg" name="column_analysis_customers" creationDate="2024-05-07T15:25:34.376+0300" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/demo_postgresql_0.1.item#_lr7CYAxsEe-KGJHkc1u0Zg"/>
+    <taggedValue xmi:id="_SMvWwQx1Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_SMvWwgx1Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+    <taggedValue xmi:id="_SMvWwwx1Ee-KGJHkc1u0Zg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_SMvWxAx1Ee-KGJHkc1u0Zg" tag="Description" value=""/>
+    <taggedValue xmi:id="_SMvWxQx1Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_STJgwQx1Ee-KGJHkc1u0Zg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_STJgwgx1Ee-KGJHkc1u0Zg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_STLV8Ax1Ee-KGJHkc1u0Zg" tag="Is Use Sample Data" value="false"/>
+    <taggedValue xmi:id="_STLV8Qx1Ee-KGJHkc1u0Zg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_SMvWxgx1Ee-KGJHkc1u0Zg">
+      <connection href="../../metadata/connections/demo_postgresql_0.1.item#_c5b0wNq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOhdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOidq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOjdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOkdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOldq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOmdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOndq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOodq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOpdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOqdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOrdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOsdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOtdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOudq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOvdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOwdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOxdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOydq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOzdq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO0dq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO1dq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO2dq2Ee6J2YQAhOqe8A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO3dq2Ee6J2YQAhOqe8A"/>
+    </context>
+    <results xmi:id="_SMvWxwx1Ee-KGJHkc1u0Zg">
+      <resultMetadata xmi:id="_SMvWyAx1Ee-KGJHkc1u0Zg"/>
+      <indicators xsi:type="dataquality.indicators.columnset:SimpleStatIndicator" xmi:id="_SMvWyQx1Ee-KGJHkc1u0Zg">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOhdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOidq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOjdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOkdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOldq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOmdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOndq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOodq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOpdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOqdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOrdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOsdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOtdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOudq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOvdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOwdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOxdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOydq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOzdq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO0dq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO1dq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO2dq2Ee6J2YQAhOqe8A"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeO3dq2Ee6J2YQAhOqe8A"/>
+        <rowCountIndicator xmi:id="_SMvWygx1Ee-KGJHkc1u0Zg">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        </rowCountIndicator>
+        <uniqueCountIndicator xmi:id="_SMvWywx1Ee-KGJHkc1u0Zg">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        </uniqueCountIndicator>
+        <distinctCountIndicator xmi:id="_SMvWzAx1Ee-KGJHkc1u0Zg">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        </distinctCountIndicator>
+        <duplicateCountIndicator xmi:id="_SMvWzQx1Ee-KGJHkc1u0Zg">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        </duplicateCountIndicator>
+      </indicators>
+    </results>
+    <parameters xmi:id="_SMvWzgx1Ee-KGJHkc1u0Zg" dataFilter="_STL9AAx1Ee-KGJHkc1u0Zg" analysisType="Column Set Analysis"/>
+    <contextType xmi:id="_STJgwAx1Ee-KGJHkc1u0Zg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_STL9AAx1Ee-KGJHkc1u0Zg" name="column_analysis_customers">
+    <ranges xmi:id="_STL9AQx1Ee-KGJHkc1u0Zg">
+      <expressions xmi:id="_STL9Agx1Ee-KGJHkc1u0Zg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_STL9Awx1Ee-KGJHkc1u0Zg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

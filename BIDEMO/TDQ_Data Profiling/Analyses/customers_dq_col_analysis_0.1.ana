@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_92Bf0Ax1Ee-KGJHkc1u0Zg" name="customers_dq_col_analysis" creationDate="2024-05-07T15:30:27.274+0300" defaultContext="Default">
+    <taggedValue xmi:id="_92Bf0Qx1Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_92Bf0gx1Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+    <taggedValue xmi:id="_92Bf0wx1Ee-KGJHkc1u0Zg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_92Bf1Ax1Ee-KGJHkc1u0Zg" tag="Description" value=""/>
+    <taggedValue xmi:id="_92Bf1Qx1Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_96ODUQx1Ee-KGJHkc1u0Zg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_96ODUgx1Ee-KGJHkc1u0Zg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_96ODUwx1Ee-KGJHkc1u0Zg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_96QfkAx1Ee-KGJHkc1u0Zg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_92Bf1gx1Ee-KGJHkc1u0Zg"/>
+    <results xmi:id="_92Bf1wx1Ee-KGJHkc1u0Zg">
+      <resultMetadata xmi:id="_92Bf2Ax1Ee-KGJHkc1u0Zg" executionDate="2024-05-07T15:30:54.531+0300" executionDuration="3498" message="For more information please refer to the Error Log view." executionNumber="1"/>
+    </results>
+    <parameters xmi:id="_92Bf2Qx1Ee-KGJHkc1u0Zg" dataFilter="_96QfkQx1Ee-KGJHkc1u0Zg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_96ODUAx1Ee-KGJHkc1u0Zg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_96QfkQx1Ee-KGJHkc1u0Zg" name="customers_dq_col_analysis">
+    <ranges xmi:id="_96Qfkgx1Ee-KGJHkc1u0Zg">
+      <expressions xmi:id="_96Qfkwx1Ee-KGJHkc1u0Zg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_96QflAx1Ee-KGJHkc1u0Zg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

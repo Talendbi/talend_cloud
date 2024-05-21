@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_si9KoAx3Ee-KGJHkc1u0Zg" name="products_rules" supplierDependency="_xyQhEAx3Ee-KGJHkc1u0Zg" criticalityLevel="1" whereExpression="price>500">
+    <taggedValue xmi:id="_si9KoQx3Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_si9Kogx3Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+    <taggedValue xmi:id="_si9Kowx3Ee-KGJHkc1u0Zg" tag="Purpose"/>
+    <taggedValue xmi:id="_si9KpAx3Ee-KGJHkc1u0Zg" tag="Description"/>
+    <taggedValue xmi:id="_si9KpQx3Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_si9Kpgx3Ee-KGJHkc1u0Zg" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_si9Kpwx3Ee-KGJHkc1u0Zg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_xyQhEAx3Ee-KGJHkc1u0Zg" kind="Usage" supplier="_si9KoAx3Ee-KGJHkc1u0Zg">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/products_tables_0.1.ana#_xyOr4Ax3Ee-KGJHkc1u0Zg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

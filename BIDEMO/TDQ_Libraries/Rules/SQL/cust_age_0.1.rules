@@ -13,5 +13,6 @@
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_xo_wYAhREeCYWb7D_hg3dw" kind="Usage" supplier="_nUrn4AhREeCYWb7D_hg3dw">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/TUTO73/cust_table_0.1.ana#_TCblYH-fEeC8IaGPxZzaMw"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/br1_0.1.ana#_lsBJAAxsEe-KGJHkc1u0Zg"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>

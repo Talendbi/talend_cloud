@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_7MzTcAx4Ee-KGJHkc1u0Zg" name="products_match" creationDate="2024-05-07T15:51:38.014+0300" defaultContext="Default">
+  <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_96ODXgx1Ee-KGJHkc1u0Zg"/>
+  <taggedValue xmi:id="_7MzTcQx4Ee-KGJHkc1u0Zg" tag="PREVIEW_ROW_NUMBER" value="100"/>
+  <taggedValue xmi:id="_7MzTcgx4Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_7MzTcwx4Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_7MzTdAx4Ee-KGJHkc1u0Zg" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_7MzTdQx4Ee-KGJHkc1u0Zg" tag="Description" value=""/>
+  <taggedValue xmi:id="_7MzTdgx4Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_7RdxAAx4Ee-KGJHkc1u0Zg" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_7RdxAQx4Ee-KGJHkc1u0Zg" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_7RdxAgx4Ee-KGJHkc1u0Zg" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_7Rls0Ax4Ee-KGJHkc1u0Zg" tag="DRILL_DOWN" value="true"/>
+  <taggedValue xmi:id="_7UU3wQx4Ee-KGJHkc1u0Zg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="_7MzTdwx4Ee-KGJHkc1u0Zg">
+    <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__AHBMNT6Ee6uTfdQ72GLsQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMx6YNT7Ee6uTfdQ72GLsQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMx6ZNT7Ee6uTfdQ72GLsQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMx6aNT7Ee6uTfdQ72GLsQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMx6bNT7Ee6uTfdQ72GLsQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMx6cNT7Ee6uTfdQ72GLsQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMx6dNT7Ee6uTfdQ72GLsQ"/>
+  </context>
+  <results xmi:id="_7MzTeAx4Ee-KGJHkc1u0Zg">
+    <resultMetadata xmi:id="_7MzTeQx4Ee-KGJHkc1u0Zg"/>
+    <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_7MzTegx4Ee-KGJHkc1u0Zg"/>
+    <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_7MzTewx4Ee-KGJHkc1u0Zg">
+      <builtInMatchRuleDefinition xmi:id="_7MzTfAx4Ee-KGJHkc1u0Zg" recordLinkageAlgorithm="T_SwooshAlgorithm">
+        <blockKeys xmi:id="_Ft1pQAx5Ee-KGJHkc1u0Zg" name="Sony" column="MANUFACTURER">
+          <preAlgorithm xmi:id="_Ft1pQQx5Ee-KGJHkc1u0Zg" algorithmType="NON_ALGO" algorithmParameters=""/>
+          <algorithm xmi:id="_Ft1pQgx5Ee-KGJHkc1u0Zg" algorithmType="exact" algorithmParameters=""/>
+          <postAlgorithm xmi:id="_Ft1pQwx5Ee-KGJHkc1u0Zg" algorithmType="NON_ALGO" algorithmParameters=""/>
+        </blockKeys>
+        <matchRules xmi:id="_7PolAAx4Ee-KGJHkc1u0Zg" name="Match Rule 1">
+          <matchKeys xmi:id="_TqWncAx5Ee-KGJHkc1u0Zg" name="tablet" column="PRODUCT_NAME" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_TqWncQx5Ee-KGJHkc1u0Zg" algorithmType="EXACT" algorithmParameters=""/>
+          </matchKeys>
+        </matchRules>
+        <survivorshipKeys xmi:id="_Cz9TQAyTEe-u3eVkGeU8gg" name="tablet" allowManualResolution="true">
+          <function xmi:id="_Cz9TQQyTEe-u3eVkGeU8gg" algorithmType="Concatenate" algorithmParameters=","/>
+        </survivorshipKeys>
+      </builtInMatchRuleDefinition>
+    </indicators>
+  </results>
+  <parameters xmi:id="_7MzTfQx4Ee-KGJHkc1u0Zg" analysisType="Match Analysis"/>
+  <contextType xmi:id="_7UU3wAx4Ee-KGJHkc1u0Zg" confirmationNeeded="false" hide="false" name="Default"/>
+</dataquality.analysis:Analysis>

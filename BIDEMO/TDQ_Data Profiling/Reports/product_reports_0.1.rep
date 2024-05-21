@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_DhhtQAx6Ee-KGJHkc1u0Zg" name="product_reports" creationDate="2024-05-07T15:59:43.375+0300" defaultContext="Default">
+  <clientDependency href="../Analyses/products_0.1.ana#_gXwRsAx6Ee-KGJHkc1u0Zg"/>
+  <taggedValue xmi:id="_DhhtQQx6Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_DhhtQgx6Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_DhhtQwx6Ee-KGJHkc1u0Zg" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_DhhtRAx6Ee-KGJHkc1u0Zg" tag="Description" value=""/>
+  <taggedValue xmi:id="_DhhtRQx6Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_DhhtRgx6Ee-KGJHkc1u0Zg" tag="OutputFolder" value=""/>
+  <taggedValue xmi:id="_DhhtRwx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_DBTYPE" value="Oracle with service name"/>
+  <taggedValue xmi:id="_DhhtSAx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_DBVERSION" value="ORACLE_18"/>
+  <taggedValue xmi:id="_DhhtSQx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_HOST" value="localhost"/>
+  <taggedValue xmi:id="_DhhtSgx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_PORT" value="1521"/>
+  <taggedValue xmi:id="_DhhtSwx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_WAREHOUSE" value=""/>
+  <taggedValue xmi:id="_DhhtTAx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_DBNAME" value=""/>
+  <taggedValue xmi:id="_DhhtTQx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_SCHEMA" value=""/>
+  <taggedValue xmi:id="_DhhtTgx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_USER" value=""/>
+  <taggedValue xmi:id="_DhhtTwx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:BKkcAzhoPlA257d1nvxYK2rGSnPcqcbQvBiOZw=="/>
+  <taggedValue xmi:id="_DhhtUAx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_PARAMETER" value=""/>
+  <taggedValue xmi:id="_DhhtUQx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_URL" value="jdbc:oracle:thin:@(description=(address=(protocol=tcp)(host=localhost)(port=1521))(connect_data=(service_name=)))"/>
+  <taggedValue xmi:id="_DhhtUgx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_DRIVER" value="oracle.jdbc.OracleDriver"/>
+  <taggedValue xmi:id="_DhhtUwx6Ee-KGJHkc1u0Zg" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.OracleDialect"/>
+  <taggedValue xmi:id="_DhhtVAx6Ee-KGJHkc1u0Zg" tag="REP_PASSWORD_CONTEXT" value="false"/>
+  <taggedValue xmi:id="_gXucgAx6Ee-KGJHkc1u0Zg" tag="OutputFileName" value=""/>
+  <taggedValue xmi:id="_gXucgQx6Ee-KGJHkc1u0Zg" tag="Single output" value="false"/>
+  <taggedValue xmi:id="_gXucggx6Ee-KGJHkc1u0Zg" tag="OutputType" value="pdf"/>
+  <taggedValue xmi:id="_gXucgwx6Ee-KGJHkc1u0Zg" tag="REP_GENERATE_FILE" value="true"/>
+  <taggedValue xmi:id="_gXuchQx6Ee-KGJHkc1u0Zg" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
+  <analysisMap xmi:id="_gXuchgx6Ee-KGJHkc1u0Zg" mustRefresh="true" reportType="Basic">
+    <analysis href="../Analyses/products_0.1.ana#_gE1dEAx3Ee-KGJHkc1u0Zg"/>
+  </analysisMap>
+  <context xmi:id="_gXuchAx6Ee-KGJHkc1u0Zg" confirmationNeeded="false" hide="false" name="Default"/>
+</dataquality.reports:TdReport>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_xyOr4Ax3Ee-KGJHkc1u0Zg" name="products_tables" creationDate="2024-05-07T15:43:25.338+0300" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_96ODXgx1Ee-KGJHkc1u0Zg"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_xyQhEAx3Ee-KGJHkc1u0Zg"/>
+    <taggedValue xmi:id="_xyOr4Qx3Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_xyOr4gx3Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+    <taggedValue xmi:id="_xyOr4wx3Ee-KGJHkc1u0Zg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_xyOr5Ax3Ee-KGJHkc1u0Zg" tag="Description" value=""/>
+    <taggedValue xmi:id="_xyOr5Qx3Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_9f_fQQySEe-u3eVkGeU8gg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_9gBUcAySEe-u3eVkGeU8gg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_xyOr5gx3Ee-KGJHkc1u0Zg">
+      <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__AHBMNT6Ee6uTfdQ72GLsQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMxTUNT7Ee6uTfdQ72GLsQ"/>
+    </context>
+    <results xmi:id="_xyOr5wx3Ee-KGJHkc1u0Zg">
+      <resultMetadata xmi:id="_xyOr6Ax3Ee-KGJHkc1u0Zg" executionDate="2024-05-08T08:34:58.572+0300" executionDuration="454" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2" outThreshold="true"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_xyOr6Qx3Ee-KGJHkc1u0Zg" count="50" computed="true">
+        <parameters xmi:id="_97NP4Ax3Ee-KGJHkc1u0Zg">
+          <indicatorValidDomain xmi:id="_9SFmIAySEe-u3eVkGeU8gg" name="Indicator threshold">
+            <ranges xmi:id="_9SGNMAySEe-u3eVkGeU8gg" name="Value Threshold">
+              <lowerValue xsi:type="dataquality.domain:TextValue" xmi:id="_9SGNMQySEe-u3eVkGeU8gg" value="5"/>
+              <upperValue xsi:type="dataquality.domain:TextValue" xmi:id="_9SGNMgySEe-u3eVkGeU8gg" value="10"/>
+            </ranges>
+          </indicatorValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMxTUNT7Ee6uTfdQ72GLsQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Bdm_oAx4Ee-KGJHkc1u0Zg" body="SELECT COUNT(*) FROM &quot;DEMO_USER&quot;.&quot;PRODUCTS&quot; " language="Oracle"/>
+        <builtInIndicatorDefinition xmi:id="_BdayYAx4Ee-KGJHkc1u0Zg" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_BdayYQx4Ee-KGJHkc1u0Zg" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_BdayYgx4Ee-KGJHkc1u0Zg" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_BdayYwx4Ee-KGJHkc1u0Zg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_xyOr6gx3Ee-KGJHkc1u0Zg" count="50" computed="true" userCount="7">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_EMxTUNT7Ee6uTfdQ72GLsQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Bdm_oQx4Ee-KGJHkc1u0Zg" body="SELECT COUNT(*) FROM &quot;DEMO_USER&quot;.&quot;PRODUCTS&quot;   WHERE (price>500)" language="Oracle"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_BdlKcAx4Ee-KGJHkc1u0Zg" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_BdlKcQx4Ee-KGJHkc1u0Zg" tag="Status" value="development"/>
+          <taggedValue xmi:id="_BdlKcgx4Ee-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_BdlKcwx4Ee-KGJHkc1u0Zg" tag="Purpose"/>
+          <taggedValue xmi:id="_BdlKdAx4Ee-KGJHkc1u0Zg" tag="Description"/>
+          <taggedValue xmi:id="_BdlKdQx4Ee-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_BdlKdgx4Ee-KGJHkc1u0Zg" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_BdlKdwx4Ee-KGJHkc1u0Zg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_xyOr6wx3Ee-KGJHkc1u0Zg" dataFilter="_9gTBQAySEe-u3eVkGeU8gg" analysisType="Table Analysis"/>
+    <contextType xmi:id="_9f_fQAySEe-u3eVkGeU8gg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_9gTBQAySEe-u3eVkGeU8gg" name="products_tables">
+    <ranges xmi:id="_9gTBQQySEe-u3eVkGeU8gg">
+      <expressions xmi:id="_9gTBQgySEe-u3eVkGeU8gg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_9gTBQwySEe-u3eVkGeU8gg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

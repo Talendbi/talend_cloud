@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_lsBJAAxsEe-KGJHkc1u0Zg" name="br1" creationDate="2024-05-07T14:23:19.654+0300">
+  <clientDependency href="../../metadata/connections/demo_postgresql_0.1.item#_lr7CYAxsEe-KGJHkc1u0Zg"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_a63WsH-eEeC8IaGPxZzaMw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xHsPgAhQEeCYWb7D_hg3dw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_xo_wYAhREeCYWb7D_hg3dw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_dHLxwAhUEeCYWb7D_hg3dw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_lsXHQwxsEe-KGJHkc1u0Zg"/>
+  <taggedValue xmi:id="_lsBJAQxsEe-KGJHkc1u0Zg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_lsBJAgxsEe-KGJHkc1u0Zg" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_lsBJAwxsEe-KGJHkc1u0Zg" tag="Purpose"/>
+  <taggedValue xmi:id="_lsBJBAxsEe-KGJHkc1u0Zg" tag="Description"/>
+  <taggedValue xmi:id="_lsBJBQxsEe-KGJHkc1u0Zg" tag="Version" value="0.1"/>
+  <context xmi:id="_lsBJBgxsEe-KGJHkc1u0Zg">
+    <connection href="../../metadata/connections/demo_postgresql_0.1.item#_c5b0wNq2Ee6J2YQAhOqe8A"/>
+    <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+    <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+    <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+  </context>
+  <results xmi:id="_lsBJBwxsEe-KGJHkc1u0Zg">
+    <resultMetadata xmi:id="_lsBJCAxsEe-KGJHkc1u0Zg"/>
+    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_lsBJCQxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJCgxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJCwxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJDAxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJDQxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJDgxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_lsBJDwxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJEAxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJEQxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJEgxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJEwxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJFAxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFL6odq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_lsBJFQxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJFgxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJFwxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJGAxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJGQxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_lsBJGgxsEe-KGJHkc1u0Zg">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_eVRIcOfOEe6dh-EuOAaz_w"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+    </indicators>
+  </results>
+  <parameters xmi:id="_lsBJGwxsEe-KGJHkc1u0Zg" analysisType="Table Analysis"/>
+</dataquality.analysis:Analysis>
