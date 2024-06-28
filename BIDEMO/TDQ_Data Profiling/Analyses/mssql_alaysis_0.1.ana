@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.schema="http://dataquality.indicators.schema" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmi:id="_CL54oCPoEe-PpP-3BNitqA" name="mssql_alaysis" creationDate="2024-06-06T11:34:55.783+0300">
+  <clientDependency href="../../metadata/connections/talend_mssql_0.1.item#_CL4qgCPoEe-PpP-3BNitqA"/>
+  <taggedValue xmi:id="_CL54oSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+  <taggedValue xmi:id="_CL54oiPoEe-PpP-3BNitqA" tag="Author" value="ahmetkaplan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_CL54oyPoEe-PpP-3BNitqA" tag="Purpose"/>
+  <taggedValue xmi:id="_CL54pCPoEe-PpP-3BNitqA" tag="Description"/>
+  <taggedValue xmi:id="_CL54pSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+  <context xmi:id="_CL54piPoEe-PpP-3BNitqA">
+    <connection href="../../metadata/connections/talend_mssql_0.1.item#_eOVkwN4wEe6S398T615wtQ"/>
+    <analysedElements xsi:type="orgomg.cwm.resource.relational:Schema" href="../../metadata/connections/talend_mssql_0.1.item#_eXvYYd4wEe6S398T615wtQ"/>
+  </context>
+  <results xmi:id="_CL54pyPoEe-PpP-3BNitqA">
+    <resultMetadata xmi:id="_CL54qCPoEe-PpP-3BNitqA" executionDate="2024-06-06T11:35:20.503+0300" executionDuration="571" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+    <indicators xsi:type="dataquality.indicators.schema:SchemaIndicator" xmi:id="_CL54qSPoEe-PpP-3BNitqA" computed="true" tableCount="6" tableRowCount="1262">
+      <analyzedElement xsi:type="orgomg.cwm.resource.relational:Schema" href="../../metadata/connections/talend_mssql_0.1.item#_eXvYYd4wEe6S398T615wtQ"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Schema_Overview_0.1.definition#_V4SA0MYUEd27NP4lvE0A4w"/>
+      <tableIndicators xmi:id="_F6QZsCPoEe-PpP-3BNitqA" rowCount="6" tableName="CUSTOMER_STATUS">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+      </tableIndicators>
+      <tableIndicators xmi:id="_F6vh4CPoEe-PpP-3BNitqA" rowCount="1131" tableName="InactiveCustomers">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+      </tableIndicators>
+      <tableIndicators xmi:id="_F7HVUCPoEe-PpP-3BNitqA" rowCount="50" tableName="products">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+      </tableIndicators>
+      <tableIndicators xmi:id="_F7vAYCPoEe-PpP-3BNitqA" rowCount="50" tableName="products_report">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+      </tableIndicators>
+      <tableIndicators xmi:id="_F8MTYCPoEe-PpP-3BNitqA" rowCount="5" tableName="regions">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+      </tableIndicators>
+      <tableIndicators xmi:id="_F8pmYCPoEe-PpP-3BNitqA" rowCount="20" tableName="sales">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+      </tableIndicators>
+    </indicators>
+  </results>
+  <parameters xmi:id="_CL54qiPoEe-PpP-3BNitqA" analysisType="Schema Analysis"/>
+</dataquality.analysis:Analysis>

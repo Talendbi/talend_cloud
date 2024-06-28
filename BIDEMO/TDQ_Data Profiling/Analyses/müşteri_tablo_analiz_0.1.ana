@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_DA8fsCPnEe-PpP-3BNitqA" name="müşteri tablo analiz" creationDate="2024-06-06T11:27:51.847+0300">
+  <clientDependency href="../../metadata/connections/demo_postgresql_0.1.item#_lr7CYAxsEe-KGJHkc1u0Zg"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_a63WsH-eEeC8IaGPxZzaMw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xHsPgAhQEeCYWb7D_hg3dw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_xo_wYAhREeCYWb7D_hg3dw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_dHLxwAhUEeCYWb7D_hg3dw"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_lsXHQwxsEe-KGJHkc1u0Zg"/>
+  <clientDependency href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_xyQhEAx3Ee-KGJHkc1u0Zg"/>
+  <taggedValue xmi:id="_DA8fsSPnEe-PpP-3BNitqA" tag="Status" value="development"/>
+  <taggedValue xmi:id="_DA8fsiPnEe-PpP-3BNitqA" tag="Author" value="ahmetkaplan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_DA8fsyPnEe-PpP-3BNitqA" tag="Purpose"/>
+  <taggedValue xmi:id="_DA8ftCPnEe-PpP-3BNitqA" tag="Description"/>
+  <taggedValue xmi:id="_DA8ftSPnEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+  <context xmi:id="_DA8ftiPnEe-PpP-3BNitqA">
+    <connection href="../../metadata/connections/demo_postgresql_0.1.item#_c5b0wNq2Ee6J2YQAhOqe8A"/>
+    <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+  </context>
+  <results xmi:id="_DA8ftyPnEe-PpP-3BNitqA">
+    <resultMetadata xmi:id="_DA8fuCPnEe-PpP-3BNitqA" executionDate="2024-06-06T11:28:18.658+0300" executionDuration="711" message="Query not executed for indicator: &quot;products_rules&quot; SQL query: SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;   WHERE (price>500). Exception: ERROR: column &quot;price&quot; does not exist&#xA;  Position: 59" executionNumber="1"/>
+    <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_DA8fuSPnEe-PpP-3BNitqA" count="5477" computed="true">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzMCPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot; " language="PostgreSQL"/>
+      <builtInIndicatorDefinition xmi:id="_G8-QYCPnEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+        <taggedValue xmi:id="_G8-QYSPnEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+        <taggedValue xmi:id="_G8-QYiPnEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+        <sqlGenericExpression xmi:id="_G8-QYyPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DA8fuiPnEe-PpP-3BNitqA">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzMiPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;  claim  JOIN  &quot;public&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="PostgreSQL"/>
+      <joinConditions xmi:id="_HAmzMSPnEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+        <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+        <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+      </joinConditions>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_G9tQMCPnEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+        <taggedValue xmi:id="_G9tQMSPnEe-PpP-3BNitqA" tag="Status" value="development"/>
+        <taggedValue xmi:id="_G9tQMiPnEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+        <taggedValue xmi:id="_G9tQMyPnEe-PpP-3BNitqA" tag="Purpose" value=""/>
+        <taggedValue xmi:id="_G9tQNCPnEe-PpP-3BNitqA" tag="Description" value=""/>
+        <taggedValue xmi:id="_G9tQNSPnEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_G9tQNiPnEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+        <sqlGenericExpression xmi:id="_G9tQNyPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DA8fuyPnEe-PpP-3BNitqA" count="5477">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzMyPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;   WHERE (Begin_dt &lt; End_dt)" language="PostgreSQL"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_G-UUMCPnEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+        <taggedValue xmi:id="_G-UUMSPnEe-PpP-3BNitqA" tag="Status" value="development"/>
+        <taggedValue xmi:id="_G-UUMiPnEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+        <taggedValue xmi:id="_G-UUMyPnEe-PpP-3BNitqA" tag="Purpose"/>
+        <taggedValue xmi:id="_G-UUNCPnEe-PpP-3BNitqA" tag="Description"/>
+        <taggedValue xmi:id="_G-UUNSPnEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_G-UUNiPnEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+        <taggedValue xmi:id="_G-UUNyPnEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+        <sqlGenericExpression xmi:id="_G-UUOCPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DA8fvCPnEe-PpP-3BNitqA" count="5477">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzNCPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="PostgreSQL"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_G-8mUCPnEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+        <taggedValue xmi:id="_G-8mUSPnEe-PpP-3BNitqA" tag="Status" value="development"/>
+        <taggedValue xmi:id="_G-8mUiPnEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+        <taggedValue xmi:id="_G-8mUyPnEe-PpP-3BNitqA" tag="Purpose"/>
+        <taggedValue xmi:id="_G-8mVCPnEe-PpP-3BNitqA" tag="Description"/>
+        <taggedValue xmi:id="_G-8mVSPnEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_G-8mViPnEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+        <taggedValue xmi:id="_G-8mVyPnEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+        <sqlGenericExpression xmi:id="_G-8mWCPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DA8fvSPnEe-PpP-3BNitqA" count="5477">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzNSPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;   WHERE (Phone_num!=&quot;&quot;)" language="PostgreSQL"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_G_eKwCPnEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+        <taggedValue xmi:id="_G_eKwSPnEe-PpP-3BNitqA" tag="Status" value="development"/>
+        <taggedValue xmi:id="_G_eKwiPnEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+        <taggedValue xmi:id="_G_eKwyPnEe-PpP-3BNitqA" tag="Purpose"/>
+        <taggedValue xmi:id="_G_eKxCPnEe-PpP-3BNitqA" tag="Description"/>
+        <taggedValue xmi:id="_G_eKxSPnEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_G_eKxiPnEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+        <taggedValue xmi:id="_G_eKxyPnEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+        <sqlGenericExpression xmi:id="_G_eKyCPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DA8fviPnEe-PpP-3BNitqA" count="5477">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzNiPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;   WHERE (example != '')" language="PostgreSQL"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_G__vMCPnEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+        <taggedValue xmi:id="_G__vMSPnEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+        <taggedValue xmi:id="_G__vMiPnEe-PpP-3BNitqA" tag="Description" value="demo"/>
+        <taggedValue xmi:id="_G__vMyPnEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+        <taggedValue xmi:id="_G__vNCPnEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+        <taggedValue xmi:id="_G__vNSPnEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+        <taggedValue xmi:id="_G__vNiPnEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+        <sqlGenericExpression xmi:id="_G__vNyPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+    <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_DA8fvyPnEe-PpP-3BNitqA" count="5477">
+      <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/demo_postgresql_0.1.item#_fFeOgNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+      <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HAmzNyPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;public&quot;.&quot;customers_master&quot;   WHERE (price>500)" language="PostgreSQL"/>
+      <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_HAk-ACPnEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+        <taggedValue xmi:id="_HAk-ASPnEe-PpP-3BNitqA" tag="Status" value="development"/>
+        <taggedValue xmi:id="_HAk-AiPnEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+        <taggedValue xmi:id="_HAk-AyPnEe-PpP-3BNitqA" tag="Purpose"/>
+        <taggedValue xmi:id="_HAk-BCPnEe-PpP-3BNitqA" tag="Description"/>
+        <taggedValue xmi:id="_HAk-BSPnEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+        <taggedValue xmi:id="_HAk-BiPnEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+        <sqlGenericExpression xmi:id="_HAk-ByPnEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+      </builtInIndicatorDefinition>
+    </indicators>
+  </results>
+  <parameters xmi:id="_DA8fwCPnEe-PpP-3BNitqA" analysisType="Table Analysis"/>
+</dataquality.analysis:Analysis>

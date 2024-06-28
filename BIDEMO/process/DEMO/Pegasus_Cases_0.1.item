@@ -170,45 +170,57 @@
       <column comment="" key="false" length="50" name="STATUS_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="50" name="TIMESTAMP" nullable="true" originalLength="50" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" label="output2" name="output2"/>
+    <metadata connector="FLOW" label="outtofilter" name="outtofilter"/>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="TalendDate.TO_CHAR(new Date(),&quot;MM/DD/YYYY HH24:MI:SS&quot;)&#10;TalendDate.parseDateInUTC(&quot;yyyy-MM-dd HH:mm:ss&quot;,&quot;&quot;,true) + StringHandling.STR('a',6)" name="output1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.STATUS_CODE + row1.STATUS_NAME " name="STATUS_CODE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="STATUS_NAME" nullable="true" type="id_String"/>
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="TalendDate.TO_CHAR(new Date(),&quot;MM/DD/YYYY HH24:MI:SS&quot;)" name="output1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.STATUS_CODE " name="STATUS_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.STATUS_NAME " name="STATUS_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;) " name="TIMESTAMP" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables name="output2" sizeState="INTERMEDIATE"/>
+      <outputTables name="outtofilter" sizeState="INTERMEDIATE"/>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="STATUS_CODE" nullable="true" type="id_String"/>
         <mapperTableEntries name="STATUS_NAME" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_2"/>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="80" sizeX="41" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_6"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeivoNq2Ee6J2YQAhOqe8A - customer_status"/>
-    <elementParameter field="TABLE" name="GROUPBYS"/>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="STATUS_CODE"/>
-      <elementValue elementRef="FUNCTION" value="count"/>
-      <elementValue elementRef="INPUT_COLUMN" value="STATUS_CODE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="customer_status" name="tAggregateRow_2">
+    <metadata connector="FLOW" label="customer_status" name="tFilterRow_6">
       <column comment="" key="false" length="50" name="STATUS_CODE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="STATUS_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+    </metadata>
+    <metadata connector="FILTER" label="customer_status" name="FILTER">
+      <column comment="" key="false" length="50" name="STATUS_CODE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="STATUS_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="REJECT" label="customer_status" name="REJECT">
+      <column comment="" key="false" length="50" name="STATUS_CODE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="STATUS_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
@@ -227,7 +239,7 @@
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m/tvw5iGgLQsaM9yX8p7umh+U/XKtwXlmx0vkLycJs3k29phhWs="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;customer_status&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPSERT"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeivoNq2Ee6J2YQAhOqe8A - customer_status"/>
     <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" show="false" value="false"/>
@@ -285,9 +297,34 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
+  <node componentName="OpenAIClient" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="640" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOpenAIClient_1"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="b3BlbmFpLXN0dWRpbyNPcGVuQUkjQ2xpZW50"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.openai.com"/>
+    <elementParameter field="TEXT" name="configuration.dataset.configuration.endpoint" value="v1/chat/completions"/>
+    <elementParameter field="CHECK" name="configuration.dataset.configuration.useJSON" value="false"/>
+    <elementParameter field="TEXT_AREA" name="configuration.dataset.configuration.jsonValue" show="false" value="{&#10;  &quot;model&quot;: &quot;{.config.model}&quot;,&#10;  &quot;messages&quot;: [&#10;    {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;{.config.prompt}&quot;},&#10;    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;{.input.content}&quot;}&#10;  ]&#10;}"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.configuration.format" value="JSON"/>
+    <elementParameter field="TEXT" name="configuration.dataset.configuration.selector" value=".choices[0].message"/>
+    <elementParameter field="CHECK" name="configuration.dataset.configuration.outputKeyValuePairs" value="false"/>
+    <elementParameter field="TABLE" name="configuration.dataset.configuration.keyValuePairs" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataset.__version" show="false" value="2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataset.datastore.__version" show="false" value="2"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+    <metadata connector="FLOW" name="tOpenAIClient_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="360" sizeX="41" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
-    <elementParameter field="TEXT" name="TO" value="&quot;receiver@example.com&quot;"/>
+    <elementParameter field="TEXT" name="TO" value="&quot;ahmet.kaplan@bitechnology.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;send@example.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
     <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
@@ -316,23 +353,32 @@
     <elementParameter field="CHECK" name="USE_TWO_LINE_TOKEN" show="false" value="false"/>
     <elementParameter field="TABLE" name="CONFIGS"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSendMail_1"/>
+    <metadata connector="FLOW" label="customer_status" name="tSendMail_1">
+      <column comment="" key="false" length="50" name="STATUS_CODE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="STATUS_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="output1" lineStyle="0" metaname="output1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tAggregateRow_2">
+  <connection connectorName="FLOW" label="outtofilter" lineStyle="0" metaname="outtofilter" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFilterRow_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outtofilter"/>
   </connection>
-  <connection connectorName="FLOW" label="output2" lineStyle="0" metaname="output2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tSendMail_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output2"/>
-  </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tDBOutput_1">
+  <connection connectorName="FILTER" label="row2" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_6" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tSendMail_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tOpenAIClient_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <note opaque="false" posX="992" posY="32" sizeHeight="321" sizeWidth="385" text="•&#9;PostgreSQL, Google Big Query, Mongo DB, Oracle DB, MSSQL, ortak alan veya ftp'den veri almak&#13;&#10;•&#9;PostgreSQL, Google Big Query, Mongo DB, Oracle DB, MSSQL, ortak alan veya ftp ortamlarına veriyi beslemek&#13;&#10;•&#9;Verideki X bir alana göre (örn: departure port) farklı kişilere email göndermek&#13;&#10;•&#9;Aggregate Functions (COUNT, SUM, AVG, MIN, MAX etc.)&#13;&#10;•&#9;Date and Time Functions&#13;&#10;•&#9;String Functions(LEFT, RIGHT, SUBSTR etc.)&#13;&#10;•&#9;Numeric Functions(ROUND, FLOOR etc.)&#13;&#10;•&#9;Window Functions(LAG, LEAD, ROW_NUMBER OVER PARTITION BY etc.)">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -342,16 +388,32 @@
   </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_da7f0a7a-88cc-456e-902f-d7ab0afccf24"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3RbP5jBLFIAkCl06DPkhynr4eUlCv1aAcIM5BbChLzJW+drDjnwU0lLwaknTnEnhDs+W1xZPqfPU&#13;
-77zf2ebIvg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b248aabd-8246-47a4-83d7-392a90b5c17e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>63PrnhjlfaeXkOVNnHBVXO0kNTAadZ2ailgXt75glz8duJ4Z4hZ3pPHkYOOZRb4MoGSzfV6AMuT9&#13;
-s6VvC38CSA==</DigestValue></Reference></SignedInfo><SignatureValue>XObIujb79qAbp8Ms83OSyNEZ4JJKGibKssl49gFRpWgpElN5VYyz+4cMIGsSxY/tBQe/11uB1IFx&#13;
-v0+AQJsAL+2qXZKzVkc7YhNIffxnR283lAORE+OklEsCvR3P1uFaPAelDFuLUmJaei/pJU1ZQvL9&#13;
-ibLADDMAvIX/3hN/0DF7GhQ32YdTZJp8EkcidjCdXwPpDAVcQoGXJXt2jMCBZ2CWB+Q6jXv906RI&#13;
-N6I6NFmtMdSTLcDaClak4rfCT23alYJaMp/9Y9gIXyXiJHT2NUO4ioCmt7oPOXtweyIsU4C+znT+&#13;
-o/7PEnsn1RaJbSCKmVTIXdEXvDnGNHq5E2G1rQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOpenAIClient_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3197209a-0a11-4c0c-9be1-d337bf4c0f2d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hd+SuhwBtElckt/SlIUG2NUs0eLptlEv9FrNCUHGOD4Xvl5N6CLXPomA7PSX70HIWAY1ymZSILKr&#13;
+6dFmy71CZw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b27b02ca-7bd1-4e35-9edb-f6b5938161da"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kGyEqII7g7Y9QWSAHysM1iE2Ck8te5cN0pOu8FJYmn5oM9RyRFC0o4G8yj3s4KOdcxjBU/51so6X&#13;
+6DgKzyWb3A==</DigestValue></Reference></SignedInfo><SignatureValue>eHpliO14pNAhDx4DWgPWcDlvBQZdX1IVtPRvpRwP+CHLRXPdby7BFcUePqAtGLvepzHnhUbCLW8k&#13;
+WxSu5dHW+MBjE5yPbmWvJW7BbEyyZ4ZW/dKcAkxeUgQsubf5eMK+9STdVRw5yyseMTavEqLZ6eKL&#13;
+6lUggWr5/zEuFcxYDAErOFqIaFW9FgNatIFMOIJo4GsAV7MynBVFcO3snjpGM859yCG9sm75xoOT&#13;
+ri5bairHLElMFYVa4QQBgS4g30bS8IWlvDtPh+qOkYkva/S4rkOnFu64VSI3FnCKix+HsbzWpBWk&#13;
+qCv7XCjpoQou7PvJpFBvNQ0xL9UsORJ0uGJzWA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -373,4 +435,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b248aabd-8246-47a4-83d7-392a90b5c17e" Target="#_da7f0a7a-88cc-456e-902f-d7ab0afccf24"><Timestamp>2024-05-21 08:44:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b27b02ca-7bd1-4e35-9edb-f6b5938161da" Target="#_3197209a-0a11-4c0c-9be1-d337bf4c0f2d"><Timestamp>2024-06-04 16:13:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

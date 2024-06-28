@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.schema="http://dataquality.indicators.schema" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmi:id="_2BowoCPmEe-PpP-3BNitqA" name="Postgre Analysis" creationDate="2024-06-06T11:26:24.656+0300">
+  <clientDependency href="../../metadata/connections/demo_postgresql_0.1.item#_lr7CYAxsEe-KGJHkc1u0Zg"/>
+  <taggedValue xmi:id="_2BowoSPmEe-PpP-3BNitqA" tag="Status" value="development"/>
+  <taggedValue xmi:id="_2BowoiPmEe-PpP-3BNitqA" tag="Author" value="ahmetkaplan@nfr.bitechnology.com"/>
+  <taggedValue xmi:id="_2BowoyPmEe-PpP-3BNitqA" tag="Purpose"/>
+  <taggedValue xmi:id="_2BowpCPmEe-PpP-3BNitqA" tag="Description"/>
+  <taggedValue xmi:id="_2BowpSPmEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+  <context xmi:id="_2BowpiPmEe-PpP-3BNitqA">
+    <connection href="../../metadata/connections/demo_postgresql_0.1.item#_c5b0wNq2Ee6J2YQAhOqe8A"/>
+    <analysedElements xsi:type="TalendMetadata:DatabaseConnection" href="../../metadata/connections/demo_postgresql_0.1.item#_c5b0wNq2Ee6J2YQAhOqe8A"/>
+  </context>
+  <results xmi:id="_2BowpyPmEe-PpP-3BNitqA">
+    <resultMetadata xmi:id="_2BowqCPmEe-PpP-3BNitqA" executionDate="2024-06-06T11:26:42.335+0300" executionDuration="761" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+    <indicators xsi:type="dataquality.indicators.schema:ConnectionIndicator" xmi:id="_2BowqSPmEe-PpP-3BNitqA" computed="true" tableCount="12" tableRowCount="18688" catalogCount="1">
+      <analyzedElement xsi:type="TalendMetadata:DatabaseConnection" href="../../metadata/connections/demo_postgresql_0.1.item#_c5b0wNq2Ee6J2YQAhOqe8A"/>
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Connection_Overview_0.1.definition#_nZEo8MYSEd27NP4lvE0A4w"/>
+      <catalogIndicators xmi:id="_4xLgECPmEe-PpP-3BNitqA" tableCount="12" tableRowCount="18688" schemaCount="1">
+        <analyzedElement xsi:type="orgomg.cwm.resource.relational:Catalog" href="../../metadata/connections/demo_postgresql_0.1.item#_c6vcUNq2Ee6J2YQAhOqe8A"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Catalog_Overview_0.1.definition#_QwDiwMYUEd27NP4lvE0A4w"/>
+        <schemaIndicators xmi:id="_4xLgESPmEe-PpP-3BNitqA" tableCount="12" tableRowCount="18688">
+          <analyzedElement xsi:type="orgomg.cwm.resource.relational:Schema" href="../../metadata/connections/demo_postgresql_0.1.item#_c6vcUdq2Ee6J2YQAhOqe8A"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Schema_Overview_0.1.definition#_V4SA0MYUEd27NP4lvE0A4w"/>
+          <tableIndicators xmi:id="_4xLgEiPmEe-PpP-3BNitqA" rowCount="4346" tableName="DataPrep_Beta_Target">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgEyPmEe-PpP-3BNitqA" rowCount="500" tableName="customer_assets">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgFCPmEe-PpP-3BNitqA" rowCount="6" tableName="customer_status">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgFSPmEe-PpP-3BNitqA" rowCount="6" tableName="customer_status_main">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgFiPmEe-PpP-3BNitqA" tableName="customer_status_tgt">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgFyPmEe-PpP-3BNitqA" rowCount="5477" tableName="customers_master">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgGCPmEe-PpP-3BNitqA" tableName="flowmeter">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgGSPmEe-PpP-3BNitqA" rowCount="5" tableName="logs">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgGiPmEe-PpP-3BNitqA" rowCount="10" tableName="product_types">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgGyPmEe-PpP-3BNitqA" rowCount="8196" tableName="products">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgHCPmEe-PpP-3BNitqA" rowCount="8" tableName="statecacher">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+          <tableIndicators xmi:id="_4xLgHSPmEe-PpP-3BNitqA" rowCount="134" tableName="stats">
+            <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Overview/Table_Overview_0.1.definition#_hgO7YMYUEd27NP4lvE0A4w"/>
+          </tableIndicators>
+        </schemaIndicators>
+      </catalogIndicators>
+    </indicators>
+  </results>
+  <parameters xmi:id="_2BowrCPmEe-PpP-3BNitqA" analysisType="Connection Analysis"/>
+</dataquality.analysis:Analysis>

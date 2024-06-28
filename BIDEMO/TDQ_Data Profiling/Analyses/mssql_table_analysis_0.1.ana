@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_M6KLECPoEe-PpP-3BNitqA" name="mssql table analysis" creationDate="2024-06-06T11:36:07.743+0300" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/talend_mssql_0.1.item#_CL4qgCPoEe-PpP-3BNitqA"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_a63WsH-eEeC8IaGPxZzaMw"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xHsPgAhQEeCYWb7D_hg3dw"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_xo_wYAhREeCYWb7D_hg3dw"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_dHLxwAhUEeCYWb7D_hg3dw"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_lsXHQwxsEe-KGJHkc1u0Zg"/>
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_xyQhEAx3Ee-KGJHkc1u0Zg"/>
+    <taggedValue xmi:id="_M6KLESPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_M6KLEiPoEe-PpP-3BNitqA" tag="Author" value="ahmetkaplan@nfr.bitechnology.com"/>
+    <taggedValue xmi:id="_M6KLEyPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_M6KLFCPoEe-PpP-3BNitqA" tag="Description" value=""/>
+    <taggedValue xmi:id="_M6KLFSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_P8RRMSPoEe-PpP-3BNitqA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_P8R4QCPoEe-PpP-3BNitqA" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_M6KLFiPoEe-PpP-3BNitqA">
+      <connection href="../../metadata/connections/talend_mssql_0.1.item#_eOVkwN4wEe6S398T615wtQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+    </context>
+    <results xmi:id="_M6KLFyPoEe-PpP-3BNitqA">
+      <resultMetadata xmi:id="_M6KLGCPoEe-PpP-3BNitqA" executionDate="2024-06-06T11:36:36.117+0300" executionDuration="8128" message="Query not executed for indicator: &quot;products_rules&quot; SQL query: SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;   WHERE (price>500). Exception: The connection is closed." executionNumber="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_M6KLGSPoEe-PpP-3BNitqA" count="6" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYECPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_QToBQCPoEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_QToBQSPoEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_QToBQiPoEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_QToBQyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLGiPoEe-PpP-3BNitqA">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYEiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot;  claim  JOIN  &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_RZKtASPoEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+          <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+          <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QUDfECPoEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+          <taggedValue xmi:id="_QUDfESPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QUDfEiPoEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+          <taggedValue xmi:id="_QUDfEyPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_QUDfFCPoEe-PpP-3BNitqA" tag="Description" value=""/>
+          <taggedValue xmi:id="_QUDfFSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QUDfFiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QUDfFyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLGyPoEe-PpP-3BNitqA" count="6">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYEyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot;   WHERE (Begin_dt &lt; End_dt)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QUgLACPoEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+          <taggedValue xmi:id="_QUgLASPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QUgLAiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QUgLAyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QUgLBCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QUgLBSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QUgLBiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QUgLByPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QUgLCCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLHCPoEe-PpP-3BNitqA" count="6">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYFCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QU3XYCPoEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+          <taggedValue xmi:id="_QU3XYSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QU3XYiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QU3XYyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QU3XZCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QU3XZSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QU3XZiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QU3XZyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QU3XaCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLHSPoEe-PpP-3BNitqA" count="6">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYFSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot;   WHERE (Phone_num!=&quot;&quot;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QVLgcCPoEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+          <taggedValue xmi:id="_QVLgcSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QVLgciPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QVLgcyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QVLgdCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QVLgdSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QVLgdiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QVLgdyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QVLgeCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLHiPoEe-PpP-3BNitqA" count="6">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYFiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot;   WHERE (example != '')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QVfpgCPoEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+          <taggedValue xmi:id="_QVfpgSPoEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+          <taggedValue xmi:id="_QVfpgiPoEe-PpP-3BNitqA" tag="Description" value="demo"/>
+          <taggedValue xmi:id="_QVfpgyPoEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+          <taggedValue xmi:id="_QVfphCPoEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+          <taggedValue xmi:id="_QVfphSPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QVfphiPoEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QVfphyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLHyPoEe-PpP-3BNitqA" count="6">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ab0KoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYFyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;CUSTOMER_STATUS&quot;   WHERE (price>500)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QV0ZoCPoEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_QV0ZoSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QV0ZoiPoEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_QV0ZoyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QV0ZpCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QV0ZpSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QV0ZpiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QV0ZpyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_M6KLICPoEe-PpP-3BNitqA" count="1131" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYGCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_QV1AsCPoEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_QV1AsSPoEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_QV1AsiPoEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_QV1AsyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLISPoEe-PpP-3BNitqA">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYGiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot;  claim  JOIN  &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_RhGhASPoEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+          <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+          <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QWIisCPoEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+          <taggedValue xmi:id="_QWIisSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QWIisiPoEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+          <taggedValue xmi:id="_QWIisyPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_QWIitCPoEe-PpP-3BNitqA" tag="Description" value=""/>
+          <taggedValue xmi:id="_QWIitSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QWIitiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QWIityPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLIiPoEe-PpP-3BNitqA" count="1131">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYGyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot;   WHERE (Begin_dt &lt; End_dt)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QWcrwCPoEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+          <taggedValue xmi:id="_QWcrwSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QWcrwiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QWcrwyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QWcrxCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QWcrxSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QWcrxiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QWcrxyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QWcryCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLIyPoEe-PpP-3BNitqA" count="1131">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYHCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QWw00CPoEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+          <taggedValue xmi:id="_QWw00SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QWw00iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QWw00yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QWw01CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QWw01SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QWw01iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QWw01yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QWw02CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLJCPoEe-PpP-3BNitqA" count="1131">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYHSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot;   WHERE (Phone_num!=&quot;&quot;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QXEW0CPoEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+          <taggedValue xmi:id="_QXEW0SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QXEW0iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QXEW0yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QXEW1CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QXEW1SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QXEW1iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QXEW1yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QXEW2CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLJSPoEe-PpP-3BNitqA" count="1131">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYHiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot;   WHERE (example != '')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QXX40CPoEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+          <taggedValue xmi:id="_QXX40SPoEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+          <taggedValue xmi:id="_QXX40iPoEe-PpP-3BNitqA" tag="Description" value="demo"/>
+          <taggedValue xmi:id="_QXX40yPoEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+          <taggedValue xmi:id="_QXX41CPoEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+          <taggedValue xmi:id="_QXX41SPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QXX41iPoEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QXX41yPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLJiPoEe-PpP-3BNitqA" count="1131">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_adMDoOfOEe6dh-EuOAaz_w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYHyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;InactiveCustomers&quot;   WHERE (price>500)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QXra0CPoEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_QXra0SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QXra0iPoEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_QXra0yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QXra1CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QXra1SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QXra1iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QXra1yPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_M6KLJyPoEe-PpP-3BNitqA" count="50" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYICPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_QXsB4CPoEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_QXsB4SPoEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_QXsB4iPoEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_QXsB4yPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLKCPoEe-PpP-3BNitqA">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYIiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot;  claim  JOIN  &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_R5zU4SPoEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+          <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+          <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QX_j4CPoEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+          <taggedValue xmi:id="_QX_j4SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QX_j4iPoEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+          <taggedValue xmi:id="_QX_j4yPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_QX_j5CPoEe-PpP-3BNitqA" tag="Description" value=""/>
+          <taggedValue xmi:id="_QX_j5SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QX_j5iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QX_j5yPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLKSPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYIyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot;   WHERE (Begin_dt &lt; End_dt)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QYTs8CPoEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+          <taggedValue xmi:id="_QYTs8SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QYTs8iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QYTs8yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QYTs9CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QYTs9SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QYTs9iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QYTs9yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QYTs-CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLKiPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYJCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QYnO8CPoEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+          <taggedValue xmi:id="_QYnO8SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QYnO8iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QYnO8yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QYnO9CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QYnO9SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QYnO9iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QYnO9yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QYnO-CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLKyPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYJSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot;   WHERE (Phone_num!=&quot;&quot;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QY6w8CPoEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+          <taggedValue xmi:id="_QY6w8SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QY6w8iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QY6w8yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QY6w9CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QY6w9SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QY6w9iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QY6w9yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QY6w-CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLLCPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYJiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot;   WHERE (example != '')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QZPhECPoEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+          <taggedValue xmi:id="_QZPhESPoEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+          <taggedValue xmi:id="_QZPhEiPoEe-PpP-3BNitqA" tag="Description" value="demo"/>
+          <taggedValue xmi:id="_QZPhEyPoEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+          <taggedValue xmi:id="_QZPhFCPoEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+          <taggedValue xmi:id="_QZPhFSPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QZPhFiPoEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QZPhFyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLLSPoEe-PpP-3BNitqA" count="50" computed="true" userCount="7">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_ghZMgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYJyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products&quot;   WHERE (price>500)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QZjqICPoEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_QZjqISPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QZjqIiPoEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_QZjqIyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QZjqJCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QZjqJSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QZjqJiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QZjqJyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_M6KLLiPoEe-PpP-3BNitqA" count="50" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYKCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_QZkRMCPoEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_QZkRMSPoEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_QZkRMiPoEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_QZkRMyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLLyPoEe-PpP-3BNitqA">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfMYKiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot;  claim  JOIN  &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_R7LN4SPoEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+          <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+          <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QZ3zMCPoEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+          <taggedValue xmi:id="_QZ3zMSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QZ3zMiPoEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+          <taggedValue xmi:id="_QZ3zMyPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_QZ3zNCPoEe-PpP-3BNitqA" tag="Description" value=""/>
+          <taggedValue xmi:id="_QZ3zNSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QZ3zNiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QZ3zNyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLMCPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_ICPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot;   WHERE (Begin_dt &lt; End_dt)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QaLVMCPoEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+          <taggedValue xmi:id="_QaLVMSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QaLVMiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QaLVMyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QaLVNCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QaLVNSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QaLVNiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QaLVNyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QaLVOCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLMSPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_ISPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QaeQICPoEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+          <taggedValue xmi:id="_QaeQISPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QaeQIiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QaeQIyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QaeQJCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QaeQJSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QaeQJiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QaeQJyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QaeQKCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLMiPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_IiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot;   WHERE (Phone_num!=&quot;&quot;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QaxyICPoEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+          <taggedValue xmi:id="_QaxyISPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QaxyIiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QaxyIyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QaxyJCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QaxyJSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QaxyJiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QaxyJyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QaxyKCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLMyPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_IyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot;   WHERE (example != '')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QbFUICPoEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+          <taggedValue xmi:id="_QbFUISPoEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+          <taggedValue xmi:id="_QbFUIiPoEe-PpP-3BNitqA" tag="Description" value="demo"/>
+          <taggedValue xmi:id="_QbFUIyPoEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+          <taggedValue xmi:id="_QbFUJCPoEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+          <taggedValue xmi:id="_QbFUJSPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QbFUJiPoEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QbFUJyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLNCPoEe-PpP-3BNitqA" count="50">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_JyKmEN4xEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_JCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;products_report&quot;   WHERE (price>500)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QbY2ICPoEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_QbY2ISPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QbY2IiPoEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_QbY2IyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QbY2JCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QbY2JSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QbY2JiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QbY2JyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_M6KLNSPoEe-PpP-3BNitqA" count="5" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_JSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_QbZdMCPoEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_QbZdMSPoEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_QbZdMiPoEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_QbZdMyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLNiPoEe-PpP-3BNitqA">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_JyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot;  claim  JOIN  &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_SUr6ESPoEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+          <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+          <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QbuNUCPoEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+          <taggedValue xmi:id="_QbuNUSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QbuNUiPoEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+          <taggedValue xmi:id="_QbuNUyPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_QbuNVCPoEe-PpP-3BNitqA" tag="Description" value=""/>
+          <taggedValue xmi:id="_QbuNVSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QbuNViPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QbuNVyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLNyPoEe-PpP-3BNitqA" count="5">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_KCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot;   WHERE (Begin_dt &lt; End_dt)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QcBvUCPoEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+          <taggedValue xmi:id="_QcBvUSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QcBvUiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QcBvUyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QcBvVCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QcBvVSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QcBvViPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QcBvVyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QcBvWCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLOCPoEe-PpP-3BNitqA" count="5">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_KSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QcV4YCPoEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+          <taggedValue xmi:id="_QcV4YSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QcV4YiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QcV4YyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QcV4ZCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QcV4ZSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QcV4ZiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QcV4ZyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QcV4aCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLOSPoEe-PpP-3BNitqA" count="5">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_KiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot;   WHERE (Phone_num!=&quot;&quot;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QcpaYCPoEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+          <taggedValue xmi:id="_QcpaYSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QcpaYiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QcpaYyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QcpaZCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QcpaZSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QcpaZiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QcpaZyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QcpaaCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLOiPoEe-PpP-3BNitqA" count="5">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_KyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot;   WHERE (example != '')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Qc9jcCPoEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+          <taggedValue xmi:id="_Qc9jcSPoEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+          <taggedValue xmi:id="_Qc9jciPoEe-PpP-3BNitqA" tag="Description" value="demo"/>
+          <taggedValue xmi:id="_Qc9jcyPoEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+          <taggedValue xmi:id="_Qc9jdCPoEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+          <taggedValue xmi:id="_Qc9jdSPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_Qc9jdiPoEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_Qc9jdyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLOyPoEe-PpP-3BNitqA" count="5">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gm4JcN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_LCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;regions&quot;   WHERE (price>500)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QdRFcCPoEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_QdRFcSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QdRFciPoEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_QdRFcyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QdRFdCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QdRFdSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QdRFdiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QdRFdyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_M6KLPCPoEe-PpP-3BNitqA" count="20" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_LSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_QdS6oCPoEe-PpP-3BNitqA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_QdS6oSPoEe-PpP-3BNitqA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_QdS6oiPoEe-PpP-3BNitqA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_QdS6oyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLPSPoEe-PpP-3BNitqA">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/claim_date_check_0.1.rules#_-ze1QH-dEeC8IaGPxZzaMw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_LyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;  claim  JOIN  &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;contract&quot;  contract  ON (claim.&quot;cont_num&quot;=contract.&quot;number&quot;) " language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_SV1woSPoEe-PpP-3BNitqA" operator="=" tableAliasA="claim" tableAliasB="contract" columnAliasA="cont_num" columnAliasB="number">
+          <colA xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4k00vvEeCEJ5SL6lrm5A"/>
+          <colB xsi:type="relational:TdColumn" href="../../metadata/connections/CRM_0.1.item#_Jp4kQ0vvEeCEJ5SL6lrm5A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QdnDsCPoEe-PpP-3BNitqA" name="claim_date_check" criticalityLevel="1" whereExpression="Date >= Begin_dt and Date &lt;= End_dt">
+          <taggedValue xmi:id="_QdnDsSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QdnDsiPoEe-PpP-3BNitqA" tag="Author" value="trunk@talend.com"/>
+          <taggedValue xmi:id="_QdnDsyPoEe-PpP-3BNitqA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_QdnDtCPoEe-PpP-3BNitqA" tag="Description" value=""/>
+          <taggedValue xmi:id="_QdnDtSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QdnDtiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QdnDtyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLPiPoEe-PpP-3BNitqA" count="20">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/contract_dates_0.1.rules#_xf8CUAhOEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_MCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;   WHERE (Begin_dt &lt; End_dt)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Qd7MwCPoEe-PpP-3BNitqA" name="contract_dates" criticalityLevel="1" whereExpression="Begin_dt &lt; End_dt">
+          <taggedValue xmi:id="_Qd7MwSPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_Qd7MwiPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_Qd7MwyPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_Qd7MxCPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_Qd7MxSPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_Qd7MxiPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_Qd7MxyPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y29udHJhY3RfZGF0ZXM=20101215022524_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_Qd7MyCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLPyPoEe-PpP-3BNitqA" count="20">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_age_0.1.rules#_nUrn4AhREeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_MSPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;   WHERE (18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QePV0CPoEe-PpP-3BNitqA" name="cust_age" criticalityLevel="1" whereExpression="18&lt;=((TO_DAYS(NOW())-TO_DAYS(DOB))/365)">
+          <taggedValue xmi:id="_QePV0SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QePV0iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_QePV0yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QePV1CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QePV1SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QePV1iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_QePV1yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9hZ2U=20101215024544_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_QePV2CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLQCPoEe-PpP-3BNitqA" count="20">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/cust_phone_0.1.rules#_UiuS0AhTEeCYWb7D_hg3dw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_MiPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;   WHERE (Phone_num!=&quot;&quot;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Qei30CPoEe-PpP-3BNitqA" name="cust_phone" criticalityLevel="1" whereExpression="Phone_num!=&quot;&quot;">
+          <taggedValue xmi:id="_Qei30SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_Qei30iPoEe-PpP-3BNitqA" tag="Author" value="user@company.com"/>
+          <taggedValue xmi:id="_Qei30yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_Qei31CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_Qei31SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_Qei31iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_Qei31yPoEe-PpP-3BNitqA" tag="Property File" value="/DQ_TUTORIALS/TDQ_Libraries/Rules/SQL/Y3VzdF9waG9uZQ==20101215025757_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_Qei32CPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLQSPoEe-PpP-3BNitqA" count="20">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Demo_DQ_Rule_0.1.rules#_hXIKcA-ZEd6qupbF9NyF4w"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_MyPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;   WHERE (example != '')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Qe3n8CPoEe-PpP-3BNitqA" name="Demo DQ Rule" criticalityLevel="1" whereExpression="example != ''">
+          <taggedValue xmi:id="_Qe3n8SPoEe-PpP-3BNitqA" tag="Author" value="xqliu"/>
+          <taggedValue xmi:id="_Qe3n8iPoEe-PpP-3BNitqA" tag="Description" value="demo"/>
+          <taggedValue xmi:id="_Qe3n8yPoEe-PpP-3BNitqA" tag="Purpose" value="demo"/>
+          <taggedValue xmi:id="_Qe3n9CPoEe-PpP-3BNitqA" tag="Status" value="Draft"/>
+          <taggedValue xmi:id="_Qe3n9SPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <taggedValue xmi:id="_Qe3n9iPoEe-PpP-3BNitqA" tag="Property File" value="\DQ_EE_DEMOS\TDQ_Libraries\Rules\SQL\Demo_DQ_Rule_0.1.properties"/>
+          <sqlGenericExpression xmi:id="_Qe3n9yPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_M6KLQiPoEe-PpP-3BNitqA" count="20">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/talend_mssql_0.1.item#_gkSvgN4wEe6S398T615wtQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/products_rules_0.1.rules#_si9KoAx3Ee-KGJHkc1u0Zg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QfM_NCPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &quot;demo_mssql&quot;.&quot;dbo&quot;.&quot;sales&quot;   WHERE (price>500)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_QfLJ8CPoEe-PpP-3BNitqA" name="products_rules" criticalityLevel="1" whereExpression="price>500">
+          <taggedValue xmi:id="_QfLJ8SPoEe-PpP-3BNitqA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_QfLJ8iPoEe-PpP-3BNitqA" tag="Author" value="onur.sahan@nfr.bitechnology.com"/>
+          <taggedValue xmi:id="_QfLJ8yPoEe-PpP-3BNitqA" tag="Purpose"/>
+          <taggedValue xmi:id="_QfLJ9CPoEe-PpP-3BNitqA" tag="Description"/>
+          <taggedValue xmi:id="_QfLJ9SPoEe-PpP-3BNitqA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_QfLJ9iPoEe-PpP-3BNitqA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_QfLJ9yPoEe-PpP-3BNitqA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_M6KLQyPoEe-PpP-3BNitqA" dataFilter="_P9NFUCPoEe-PpP-3BNitqA" analysisType="Table Analysis"/>
+    <contextType xmi:id="_P8RRMCPoEe-PpP-3BNitqA" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_P9NFUCPoEe-PpP-3BNitqA" name="mssql table analysis">
+    <ranges xmi:id="_P9NFUSPoEe-PpP-3BNitqA">
+      <expressions xmi:id="_P9NFUiPoEe-PpP-3BNitqA">
+        <expression xsi:type="relational:TdExpression" xmi:id="_P9NFUyPoEe-PpP-3BNitqA" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

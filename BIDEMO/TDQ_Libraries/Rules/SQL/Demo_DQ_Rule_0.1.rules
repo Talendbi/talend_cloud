@@ -12,5 +12,7 @@
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_lsXHQwxsEe-KGJHkc1u0Zg" kind="Usage" supplier="_hXIKcA-ZEd6qupbF9NyF4w">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/br1_0.1.ana#_lsBJAAxsEe-KGJHkc1u0Zg"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/müşteri_tablo_analiz_0.1.ana#_DA8fsCPnEe-PpP-3BNitqA"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/mssql_table_analysis_0.1.ana#_M6KLECPoEe-PpP-3BNitqA"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
