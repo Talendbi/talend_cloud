@@ -3,12 +3,12 @@
     <contextParameter comment="" internalId="_OHseIOwiEe6ymITDvVYglg" name="TXTpath" prompt="TXTpath?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:\public\phones"/>
     <contextParameter comment="" internalId="_Q2-IgBIZEe-wWI4cxLnM5w" name="PC_API_KEY" prompt="PC_API_KEY?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="b368e1f9-d970-4700-92a0-5a053dd7d21a"/>
     <contextParameter comment="" internalId="_Q2-IgRIZEe-wWI4cxLnM5w" name="PC_URL" prompt="PC_URL?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="https://phones-dswkueq.svc.aped-4627-b74a.pinecone.io"/>
-    <contextParameter comment="" internalId="_G8sKsBwfEe-z6b6V2LOp2g" name="OAI_KEY" prompt="OAI_KEY?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="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"/>
+    <contextParameter comment="" internalId="_G8sKsBwfEe-z6b6V2LOp2g" name="OAI_KEY" prompt="OAI_KEY?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" internalId="_G8sKsRwfEe-z6b6V2LOp2g" name="Embedding_model" prompt="Embedding_model?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="text-embedding-ada-002"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="440"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="400"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
@@ -49,7 +49,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:C4jv5q5DWZAa4+HNoU7dzv+hyv8JoYP49UTqP1OY"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:mm6/P6yI24DGIzB8C3NS1Dbn7n1MyW7QQ8cHqyAV"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -59,40 +59,42 @@
     <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
     <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
-    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
-    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/jmonteil/workspace_latest_1/.metadata&quot;"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/presales/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="JDBCOutput"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
-    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" show="false" value="_MeivoNq2Ee6J2YQAhOqe8A"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="URL" show="false" value=""/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
-    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.34.40.169&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5433&quot;"/>
     <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;damadb&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;damadb&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:PFmKQHcYcTTd1R/y+8VKg4uYYwonMANjv5DutfMZ"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WYIfM7h3ApXicgyZ1FYPt8P1FpEFCphG2OhwlnGpIfcBamU+wJw="/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;stats&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;flowmeter&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
     <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
     <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
     <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
@@ -195,7 +197,7 @@
     <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.openai.com"/>
     <elementParameter field="TEXT" name="configuration.dataset.configuration.endpoint" value="v1/embeddings"/>
     <elementParameter field="CHECK" name="configuration.dataset.configuration.useJSON" value="true"/>
-    <elementParameter field="TEXT_AREA" name="configuration.dataset.configuration.jsonValue" value="{&#13;&#10;  &quot;input&quot;:&quot;{.input.chunk}&quot;,&#13;&#10;  &quot;model&quot;: &quot;text-embedding-ada-002&quot;,&#13;&#10;  &quot;encoding_format&quot;: &quot;float&quot;&#13;&#10;}"/>
+    <elementParameter field="TACOKIT_TEXT_AREA" name="configuration.dataset.configuration.jsonValue" value="{&#13;&#10;  &quot;input&quot;:&quot;{.input.chunk}&quot;,&#13;&#10;  &quot;model&quot;: &quot;text-embedding-ada-002&quot;,&#13;&#10;  &quot;encoding_format&quot;: &quot;float&quot;&#13;&#10;}"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataset.configuration.format" value="JSON"/>
     <elementParameter field="TEXT" name="configuration.dataset.configuration.selector" value=".data[*]"/>
     <elementParameter field="CHECK" name="configuration.dataset.configuration.outputKeyValuePairs" value="false"/>
@@ -267,30 +269,6 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="PineconeClient" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="920" posY="360">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPineconeClient_1"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="cGluZWNvbmUtc3R1ZGlvI1BpbmVjb25lI0NsaWVudA"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="Upsert to Pinecone"/>
-    <elementParameter field="PASSWORD" name="configuration.dataset.datastore.apiKey" value="enc:system.encryption.key.v1:dEJj/z82ZZoZ0Ys0J3iRHBUurCFzsfS6bxjl4zy7zQHGOMI39Sx0wLZCjkG9Mw=="/>
-    <elementParameter field="TEXT" name="configuration.dataset.indexName" value="phones"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataset.indexEndpoint" value="https://phones-dswkueq.svc.aped-4627-b74a.pinecone.io"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataset.operation" value="UPSERT"/>
-    <elementParameter field="TEXT" name="configuration.dataset.queryConfig.topK" show="false" value="1"/>
-    <elementParameter field="CHECK" name="configuration.dataset.deleteConfig.deleteAll" show="false" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataset.queryConfig.includeValues" show="false" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataset.queryConfig.includeMetadata" show="false" value="true"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataset.__version" show="false" value="1"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataset.datastore.__version" show="false" value="1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="REJECT" name="REJECT"/>
-    <metadata connector="FLOW" name="tPineconeClient_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="upsertedCount" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
@@ -312,6 +290,16 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_4">
+      <column comment="" defaultValue="" key="false" length="-1" name="upsertedCount" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="PineconeClient" offsetLabelX="0" offsetLabelY="0" posX="920" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPineconeClient_1"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+    <metadata connector="FLOW" name="tPineconeClient_1">
       <column comment="" defaultValue="" key="false" length="-1" name="upsertedCount" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
@@ -362,13 +350,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1933bdef-3a08-475b-a804-c0998550737c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vNd2R8KJuuPCdNBkIw2G2cru9AF0QKxvRuTq5ANJW1AFQzRLVV9n5nfQ6s7+ECOjNRols0HjX+KS&#13;
-te/pv9Hk+A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1d337273-5a9a-453a-bdc2-b14ed5d1c023"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GXMDiI0ogs1BHdBwW1L/Kz00RIZKF2VPhnC036RnnOdamAY7Xb3Pvpv+59d7AY1kel5WasEWUIzI&#13;
-FguUdnL93A==</DigestValue></Reference></SignedInfo><SignatureValue>V91PT4V9gX5PUf4dKSSoX3jOewmW0eIMaWgMuw8ZE0/mXVKua+IzUXyWsJeq9DVFfxbGFzleZwR3&#13;
-dh5RGbZfqLqHJJfRSaTbnNQvFuImiUdC/O1x33J/SM/TYtCiHRcyzCRehZo1wlCI0FH9Wzp+fRGd&#13;
-lhABfFSgghoSq/jziHORz9twQ3e9tUjbwojcKYIAH2BnUV2RAVYdSMlq9sHL2kOFKrX2X4We5HIi&#13;
-xjGBupq5jtp/6LNOWnsXK9migCXCq2WvB5Klf+0/OmPyO3Coaur/pf9xXFv6o9Dr0p7gIZN1iaTe&#13;
-SUDv61xGVpPTt5ZGVEHRqAcy+K4Ddb9ODOWv2A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e378b715-2f43-4d3f-bac1-3e1534b52dcd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bmDupklzMEOz8nxm7v3g8OXS9UTNbhvH8B3rEdoHxwUI+d3BqEeI8mzJqgfAyFZDq0kU3eBqdr+R&#13;
+22g/TH+fYw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0e7e73eb-9e88-4483-9bd7-783c88bc10fd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gi8s1jVMQrRstm836lpxsMstPgYKWb9k5b1sVvZdOk+1DWvC7tkI94U9ilD2OYkIvjkfWLrdcDba&#13;
+p0xx0jtMrg==</DigestValue></Reference></SignedInfo><SignatureValue>IcXso3jS4RD5Nu0MI6pFhm1CC5+SObHXD0Sc63Xo9MkMlR97KWeNzLbWvPGege9EgTtD8zG2i51X&#13;
+tkwms3FM/cxdbJD5W0Bh/qAOi+yNlEYo+lRtfRK2HAeAfsmzIQwgftPv04cchOCkFDg+beppKh6b&#13;
+paxWnJnwwnbhYnTdyHJ0Ahy6L4V96ceUFfomdcqxzhwbZzH36Vy9wZZpzMJYW9ACGVzF04IVwpBF&#13;
+lcTKcOPLW2J2UJtnyMkQCVAh3XWnyQAQ4vXyd3CNYr1q+gLZyFYXiQ3XkHMaVINranZtN7DtUiuv&#13;
+rJbUR+DapNlfLtQUuf7f2fC4TFXbkAJLyoh6tQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -390,4 +378,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1d337273-5a9a-453a-bdc2-b14ed5d1c023" Target="#_1933bdef-3a08-475b-a804-c0998550737c"><Timestamp>2024-06-28 08:46:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0e7e73eb-9e88-4483-9bd7-783c88bc10fd" Target="#_e378b715-2f43-4d3f-bac1-3e1534b52dcd"><Timestamp>2024-06-28 09:05:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
